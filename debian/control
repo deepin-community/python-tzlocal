@@ -1,0 +1,30 @@
+Source: python-tzlocal
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Edward Betts <edward@4angle.com>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-python3,
+               python3-all,
+               python3-mock,
+               python3-setuptools,
+               python3-tz
+Rules-Requires-Root: no
+Standards-Version: 4.5.0
+Homepage: https://github.com/regebro/tzlocal
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-tzlocal
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-tzlocal.git
+
+Package: python3-tzlocal
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: tzinfo object for the local timezone
+ This Python module returns a tzinfo object with the local timezone
+ information.
+ .
+ Example of usage:
+ .
+    >>> from tzlocal import get_localzone
+    >>> tz = get_localzone()
+    >>> tz
+    <DstTzInfo 'Europe/Warsaw' WMT+1:24:00 STD>

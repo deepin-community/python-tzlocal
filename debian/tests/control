@@ -1,0 +1,3 @@
+Test-Command: python3 -munittest discover -v
+Restrictions: allow-stderr
+Depends: python3-mock, @

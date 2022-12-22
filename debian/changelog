@@ -1,0 +1,124 @@
+python-tzlocal (2.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update debhelper-compat to 13
+  * Switch from dh --with python in debian/rules to a dh-sequence-python3
+    Build-Depends
+  * Add debian/upstream/metadata
+
+ -- Edward Betts <edward@4angle.com>  Mon, 31 Aug 2020 15:39:23 +0100
+
+python-tzlocal (2.1~b1-2) unstable; urgency=medium
+
+  * Adjust debian/watch to use uversionmangle, so upstream beta versions
+    are handled correctly.
+
+ -- Edward Betts <edward@4angle.com>  Wed, 12 Feb 2020 09:33:42 +0000
+
+python-tzlocal (2.1~b1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Standards-Version.
+  * Set Rules-Requires-Root to no.
+  * Update copyright year.
+  * Update package description.
+
+ -- Edward Betts <edward@4angle.com>  Tue, 11 Feb 2020 07:34:06 +0000
+
+python-tzlocal (2.0.0b2-4) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #938235
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 12 Dec 2019 22:16:51 -0500
+
+python-tzlocal (2.0.0b2-3) unstable; urgency=medium
+
+  * Restore python2 support, still needed by two other packages.
+
+ -- Edward Betts <edward@4angle.com>  Sun, 01 Sep 2019 13:57:46 +0100
+
+python-tzlocal (2.0.0b2-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.0.
+
+  [ Edward Betts ]
+  * Drop python2 support. (Closes: #938235)
+  * Update Standards-Version (no changes).
+  * Update debhelper-compat to 12.
+
+ -- Edward Betts <edward@4angle.com>  Fri, 30 Aug 2019 12:34:34 +0100
+
+python-tzlocal (2.0.0b2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Edward Betts <edward@4angle.com>  Tue, 18 Jun 2019 12:05:55 +0100
+
+python-tzlocal (2.0.0b1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Standards-Version (no changes).
+  * Update copyright year.
+  * Add autopkgtest test suite.
+
+ -- Edward Betts <edward@4angle.com>  Sat, 16 Mar 2019 10:56:52 +0000
+
+python-tzlocal (1.5.1-1) unstable; urgency=medium
+
+  [ Edward Betts ]
+  * New upstream release.
+  * Refresh patches after git-dpm to gbp pq conversion
+  * Upstream changed the license from CC0 to MIT.
+  * The tests in the pypi release fail, but they work with the github
+    release. This is because there is a symlink in the testsuite, sdist
+    does not preserve symlinks when generating a pypi release. This
+    package now uses the github release as upstream, so the tests pass.
+  * Update debian/watch to check github instead of pypi.
+  * Update debian/compat.
+  * Update Standards-Version (no changes).
+  * Add new Build-Depends: python-mock and python3-mock.
+  * Instead of patching MANIFEST.in use pyremove to avoid installing
+    test_data.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+ -- Edward Betts <edward@4angle.com>  Tue, 13 Feb 2018 06:40:25 +0000
+
+python-tzlocal (1.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Edward Betts <edward@4angle.com>  Fri, 21 Apr 2017 07:45:42 +0100
+
+python-tzlocal (1.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Standards-Version.
+
+ -- Edward Betts <edward@4angle.com>  Fri, 18 Nov 2016 12:44:29 +0000
+
+python-tzlocal (1.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Edward Betts <edward@4angle.com>  Tue, 22 Mar 2016 10:06:00 +0000
+
+python-tzlocal (1.2-2) unstable; urgency=medium
+
+  * Update Vcs-* control headers.
+  * debian/rules: unset TZ, so tests don't fail (Closes: #802122)
+
+ -- Edward Betts <edward@4angle.com>  Sun, 25 Oct 2015 08:45:30 +0000
+
+python-tzlocal (1.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #797503)
+
+ -- Edward Betts <edward@4angle.com>  Thu, 03 Sep 2015 21:19:42 +0100

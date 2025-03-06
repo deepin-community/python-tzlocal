@@ -1,6 +1,10 @@
 #!/usr/bin/make -f
 
 export PYBUILD_NAME=tzlocal
-unexport TZ  # test suite fails if TZ is set
+# We can't rely on pybuild for this, as it follows symlinks rather than copying
+# them.
+export PYBUILD_BEFORE_TEST=cp -a {dir}/tests {build_dir}/tests
+export PYBUILD_AFTER_TEST=rm -rf {build_dir}/tests
+
 %:
 	dh $@ --buildsystem=pybuild

@@ -1,0 +1,3 @@
+pyproject.toml
+# Deliberately exclude tests here, as pybuild follows symlinks rather than
+# copying them; we copy it ourselves in debian/rules.

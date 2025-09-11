@@ -1,6 +1,5 @@
 #!/usr/bin/make -f
 
-export PYBUILD_NAME=tzlocal
 # We can't rely on pybuild for this, as it follows symlinks rather than copying
 # them.
 export PYBUILD_BEFORE_TEST=cp -a {dir}/tests {build_dir}/tests

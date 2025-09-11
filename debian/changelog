@@ -1,3 +1,13 @@
+python-tzlocal (5.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Standards-Version.
+  * Update copyright year.
+  * Move packages required for tests to Build-Depends-Indep.
+  * Simplify debian/watch.
+
+ -- Edward Betts <edward@4angle.com>  Sun, 09 Mar 2025 05:41:41 +0000
+
 python-tzlocal (5.3-1) unstable; urgency=medium
 
   * Team upload.
